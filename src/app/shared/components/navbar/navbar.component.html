@@ -1,0 +1,35 @@
+<nav id="navbar">
+  <a href="/" class="nav-logo" (click)="navigateTo('hero'); $event.preventDefault()">
+    <img src="Navbar_logo.jpeg" alt="Malkrís Logo" />
+  </a>
+
+  <ul class="nav-links" [class.mobile-open]="isOpen">
+    <li>
+      <a href="/about" (click)="navigateTo('about'); $event.preventDefault()">About</a>
+    </li>
+
+    <li>
+      <a href="/solutions" (click)="navigateTo('solutions'); $event.preventDefault()">Solutions</a>
+    </li>
+
+    <li>
+      <a href="/pricing" (click)="navigateTo('pricing'); $event.preventDefault()">Pricing</a>
+    </li>
+
+    <li>
+      <a href="/contact" (click)="navigateTo('contact'); $event.preventDefault()">Contact</a>
+    </li>
+
+    <li>
+      <a href="/contact" class="nav-cta" (click)="navigateTo('contact'); $event.preventDefault()">
+        Book a Demo
+      </a>
+    </li>
+  </ul>
+
+  <button class="nav-mobile-toggle" (click)="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>

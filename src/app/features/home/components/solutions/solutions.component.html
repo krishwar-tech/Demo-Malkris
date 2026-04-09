@@ -1,0 +1,22 @@
+<div class="section-wrap" id="solutions">
+  <div class="solutions-header">
+    <div>
+      <p class="section-label">What We Offer</p>
+      <h2 class="section-title">One platform.<br />Every solution.</h2>
+    </div>
+
+    <p class="section-sub" style="max-width: 300px; text-align: right">
+      Eight powerful modules, unified in one intelligent ecosystem.
+    </p>
+  </div>
+
+  <div class="solutions-grid">
+    <div class="sol-card" *ngFor="let item of solutions">
+      <span class="sol-arrow">↗</span>
+      <span class="sol-icon">{{ item.icon }}</span>
+
+      <div class="sol-title">{{ item.title }}</div>
+      <div class="sol-desc">{{ item.desc }}</div>
+    </div>
+  </div>
+</div>

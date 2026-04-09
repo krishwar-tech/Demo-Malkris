@@ -1,0 +1,94 @@
+<div class="section-wrap" id="contact">
+  <div class="contact-grid">
+    <div>
+      <p class="section-label">GET IN TOUCH</p>
+
+      <h2 class="section-title">Let's build something<br />great together</h2>
+
+      <p class="section-sub">
+        Have a question or want to see Malkrís in action? Send us a message or book a demo call
+        directly.
+      </p>
+
+      <form class="contact-form" (ngSubmit)="submitForm()">
+        <div class="form-row">
+          <div>
+            <label>First Name</label>
+            <input type="text" [(ngModel)]="formData.fname" name="fname" />
+          </div>
+
+          <div>
+            <label>Last Name</label>
+            <input type="text" [(ngModel)]="formData.lname" name="lname" />
+          </div>
+        </div>
+
+        <div>
+          <label>Work Email</label>
+          <input type="email" [(ngModel)]="formData.email" name="email" />
+        </div>
+
+        <div>
+          <label>Company</label>
+          <input type="text" [(ngModel)]="formData.company" name="company" />
+        </div>
+
+        <div>
+          <label>Interested In</label>
+          <select [(ngModel)]="formData.interest" name="interest">
+            <option>Select a solution</option>
+            <option>CRM</option>
+            <option>Analytics</option>
+            <option>HR</option>
+          </select>
+        </div>
+
+        <div>
+          <label>Message</label>
+          <textarea [(ngModel)]="formData.message" name="message"></textarea>
+        </div>
+
+        <button class="form-submit" type="submit">Send Message →</button>
+      </form>
+    </div>
+
+    <div class="contact-card">
+      <h3>Book a Live Demo</h3>
+
+      <p>See Malkrís in action with a personalized 30–minute walkthrough with our team.</p>
+
+      <div class="demo-box">
+        <div class="demo-icon">📅</div>
+        <p>Schedule a time that works for you</p>
+
+        <button class="demo-btn" type="button" (click)="openCalendly()">Open Scheduler →</button>
+      </div>
+
+      <div class="contact-info-cards">
+        <div class="info-card">
+          <span>✉️</span>
+          <div>
+            <div class="info-title">Email</div>
+            <div class="info-text">hello@malkris.com</div>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <span>🌍</span>
+          <div>
+            <div class="info-title">Global</div>
+            <div class="info-text">Available worldwide</div>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <span>⏱️</span>
+          <div>
+            <div class="info-title">Response Time</div>
+            <div class="info-text">Within 24 hours</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

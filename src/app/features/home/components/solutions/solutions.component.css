@@ -1,0 +1,126 @@
+/* Solutions */
+.solutions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  background: var(--gray-200);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.sol-card {
+  background: var(--white);
+  padding: 36px 28px;
+  position: relative;
+  transition: background 0.3s;
+}
+.sol-card:hover {
+  background: var(--black);
+}
+.sol-card:hover .sol-icon,
+.sol-card:hover .sol-title,
+.sol-card:hover .sol-desc {
+  color: var(--white);
+}
+.sol-card:hover .sol-arrow {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.sol-icon {
+  font-size: 28px;
+  margin-bottom: 20px;
+  display: block;
+  transition: 0.3s;
+}
+.sol-title {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  transition: 0.3s;
+}
+.sol-desc {
+  font-size: 0.85rem;
+  color: var(--gray-600);
+  line-height: 1.5;
+  transition: 0.3s;
+}
+.sol-arrow {
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  font-size: 1.1rem;
+  opacity: 0;
+  transform: translate(-4px, 4px);
+  transition: var(--transition);
+  color: var(--white);
+}
+@media (max-width: 1024px) {
+  .solutions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .section-wrap {
+    padding: 60px 20px;
+  }
+
+  .solutions-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .solutions-header .section-sub {
+    text-align: left !important;
+    max-width: 100% !important;
+  }
+
+  .solutions-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+  }
+
+  .sol-card {
+    padding: 24px 18px;
+  }
+
+  .sol-icon {
+    font-size: 24px;
+    margin-bottom: 14px;
+  }
+
+  .sol-title {
+    font-size: 0.95rem;
+  }
+
+  .sol-desc {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .solutions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+    line-height: 1.3;
+  }
+
+  .section-sub {
+    font-size: 14px;
+  }
+
+  .sol-card {
+    padding: 22px 16px;
+  }
+}

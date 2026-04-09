@@ -1,0 +1,150 @@
+/* About */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: start;
+}
+.acronym-list {
+  margin-top: 40px;
+}
+.acronym-item {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--gray-200);
+  transition: padding-left 0.3s ease;
+}
+.acronym-item:first-child {
+  border-top: 1px solid var(--gray-200);
+}
+.acronym-item:hover {
+  padding-left: 8px;
+}
+.acronym-letter {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.5rem;
+  min-width: 24px;
+}
+.acronym-text {
+  font-size: 0.95rem;
+  color: var(--gray-600);
+  line-height: 1.5;
+}
+.acronym-text strong {
+  color: var(--black);
+  font-weight: 600;
+}
+.about-visual {
+  background: var(--gray-100);
+  border-radius: 24px;
+  padding: 48px;
+  position: relative;
+  overflow: hidden;
+}
+.about-visual::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 200px;
+  height: 200px;
+  background: var(--black);
+  border-radius: 50%;
+  opacity: 0.04;
+}
+.about-quote {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+}
+.about-quote em {
+  font-style: italic;
+  color: var(--gray-400);
+}
+.about-quote-attr {
+  margin-top: 24px;
+  font-size: 0.82rem;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.tags-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.tag {
+  background: var(--black);
+  color: var(--white);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+@media (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-wrap {
+    padding: 60px 20px;
+  }
+
+  .about-grid {
+    gap: 40px;
+  }
+
+  .acronym-item {
+    padding: 12px 0;
+  }
+
+  .acronym-letter {
+    font-size: 1.3rem;
+  }
+
+  .acronym-text {
+    font-size: 0.9rem;
+  }
+
+  .about-visual {
+    padding: 28px 22px;
+  }
+
+  .about-quote {
+    font-size: 1.2rem;
+  }
+
+  .about-quote-attr {
+    font-size: 0.75rem;
+  }
+
+  .about-tags {
+    margin-top: 20px;
+  }
+
+  .tag {
+    font-size: 0.75rem;
+    padding: 5px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.6rem;
+    line-height: 1.3;
+  }
+
+  .section-sub {
+    font-size: 14px;
+  }
+
+  .about-quote {
+    font-size: 1.1rem;
+  }
+}

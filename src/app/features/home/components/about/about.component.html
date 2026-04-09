@@ -1,0 +1,47 @@
+<div class="section-wrap" id="about">
+  <div class="about-grid">
+    <div class="reveal">
+      <p class="section-label">Who We Are</p>
+
+      <h2 class="section-title">
+        Rooted in values.<br />
+        Rising with technology.
+      </h2>
+
+      <p class="section-sub">
+        Guided by enduring principles and visionary leadership, Malkrís transforms purpose into
+        global impact — one intelligent solution at a time.
+      </p>
+
+      <div class="acronym-list">
+        <div class="acronym-item" *ngFor="let item of values">
+          <span class="acronym-letter">{{ item.letter }}</span>
+          <span class="acronym-text">
+            <strong>{{ item.title }}</strong> — {{ item.desc }}
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="about-visual">
+        <div class="about-quote">
+          "Modern. Intuitive. Built for businesses that
+          <em>think beyond boundaries.</em>"
+        </div>
+
+        <div class="about-quote-attr">— The Malkrís Commitment</div>
+      </div>
+
+      <div class="about-tags">
+        <p class="section-label">At the forefront of</p>
+
+        <div class="tags-wrap">
+          <span class="tag" *ngFor="let tag of tags">
+            {{ tag }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
